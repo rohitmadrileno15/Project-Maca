@@ -28,7 +28,14 @@ headers = {
 
 app.secret_key = 'fdklnklfdnlznbzklklnh '
 
-@app.route('/', methods=["GET", "POST"])
+
+@app.route('/')
+def home():
+
+    return render_template("home.html")
+
+
+@app.route('/first_view', methods=["GET", "POST"])
 def index():
     if request.method == 'POST':
         result = request.form
@@ -63,6 +70,11 @@ def results(id):
         artist_pic_value = (((num)['artist'])['picture_big'])
         artist_name_value = (((num)['artist'])['name'])
         artist_link_value = (get_link_of_song(title_value , artist_name_value))
+
+        if artist_link_value is None:
+            artist_link_value = ""
+            print(artist_link_value)
+
 
         print("Link- ",artist_link_value)
         b= {"title_value":title_value , 'artist_pic_value':artist_pic_value ,"artist_link_value": artist_link_value, "artist_name_value" : artist_name_value}

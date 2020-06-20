@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+      <style media="screen">
+        .main{
+          margin: 0 auto;
+
+          padding-left:  40%;
+          padding-top: 40px;
+        }
+
+        .main button{
+            margin: 5%;
+        }
+      </style>
+
+    </head>
+    <body >
+      <script src="https://code.responsivevoice.org/responsivevoice.js?key=v6dQ0XeY"></script>
+<div class="main">
+
+  <h1>Project Maca</h1>
+
+
+
+    <button type="button" onclick="setTimeout(speakText() , 100)" name="button">Started</button>
+  <a id="a-tag"style="display:none;"href="/first_view"> Let's hear some songs</a>
+
+</div>
+
+
+<p>Music Defined By your mood!</p>
+
+        <script>
+          function a_tag_visib() {
+              document.getElementById("a-tag").style.display = "block";
+          }
+            function speakText(){
+                console.log("Logging");
+                var text = "Introducing you to a new kind of Music Player ... Project Maca. " ;
+                responsiveVoice.speak(text);
+                  setTimeout(a_tag_visib , 4000 );
+                }
+
+
+        </script>
+    </body>
+</html>

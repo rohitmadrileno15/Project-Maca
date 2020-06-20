@@ -63,11 +63,9 @@
             <h3 class="text-gray-900 title-font text-lg font-medium">{{post.title_value}}</h2>
 
             <h2 class="mb-8 leading-relaxed">{{post.artist_name_value}}</h3>
-
-
-            <a href="https://youtube.com{{post.artist_link_value}}"><span id="listen"> &nbsp; Listen to it on Youtube&nbsp;</span></a>
-            
-
+              {% if {{post.artist_link_value}}|length %}
+                <a href="https://youtube.com{{post.artist_link_value}}"><span id="listen"> &nbsp; Listen to it on Youtube&nbsp;</span></a>
+                {% endif %}
 
           </div>
       </div>
