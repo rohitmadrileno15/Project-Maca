@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+      <style media="screen">
+        .main{
+          margin: 0 auto;
+          padding-left:  40%;
+          padding-top: 40px;
+        }
+
+        .main button{
+            margin: 7%;
+        }
+      </style>
+
+    </head>
+    <body >
+
+<div class="main">
+
+  <h1> Our recommendation</h1>
+
+<br>
+{% for post in popo %}
+<div class="">
+<li>      {{post.title_value}}</li>
+
+<a href="https://youtube.com{{post.artist_link_value}}"><span id="listen"> &nbsp; Listen to it on Youtube&nbsp;</span></a>
+<br>
+</div>
+<br>
+
+{% endfor %}
+
+
+</div>
+
+
+<p>Music Redefined !</p>
+
+
+
+
+    </body>
+</html>

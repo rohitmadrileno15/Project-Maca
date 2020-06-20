@@ -49,32 +49,19 @@
 </header>
 
 <!-- {{track}} -->
-<section class="text-gray-700 body-font">
-  <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -m-4">
         {% for post in post%}
-        <div id="whole-body"class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden" src="{{post.artist_link_value}}">
+<div class="">
+<li>      {{post.title_value}}</li>
+ {{post.artist_name_value}}
+ <a href="https://youtube.com{{post.artist_link_value}}"><span id="listen"> &nbsp; Listen to it on Youtube&nbsp;</span></a>
+<br>
+</div>
+<br>
 
-        <img src="{{post.artist_pic_value}}" class="object-cover object-center w-full h-full block" alt="Picture">
-
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-900 title-font text-lg font-medium">{{post.title_value}}</h2>
-
-            <h2 class="mb-8 leading-relaxed">{{post.artist_name_value}}</h3>
-              {% if {{post.artist_link_value}}|length %}
-                <a href="https://youtube.com{{post.artist_link_value}}"><span id="listen"> &nbsp; Listen to it on Youtube&nbsp;</span></a>
-                {% endif %}
-
-          </div>
-      </div>
         {% endfor %}
 
 
-    </div>
-  </div>
-</section>
+
 
 <footer class="text-gray-500 bg-gray-900 body-font">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
