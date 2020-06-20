@@ -5,13 +5,12 @@
       <style media="screen">
         .main{
           margin: 0 auto;
-
           padding-left:  40%;
           padding-top: 40px;
         }
 
         .main button{
-            margin: 5%;
+            margin: 7%;
         }
       </style>
 
@@ -24,7 +23,7 @@
 
 
 
-    <button type="button" onclick="setTimeout(speakText() , 100)" name="button">Started</button>
+    <button id="btn" type="button" style="display: block;" onclick="setTimeout(speakText() , 100)" name="button">Started</button>
   <a id="a-tag"style="display:none;"href="/first_view"> Let's hear some songs</a>
 
 </div>
@@ -35,12 +34,14 @@
         <script>
           function a_tag_visib() {
               document.getElementById("a-tag").style.display = "block";
+
+              document.getElementById("btn").style.display = "none";
           }
             function speakText(){
                 console.log("Logging");
-                var text = "Introducing you to a new kind of Music Player ... Project Maca. " ;
+                var text = "Introducing you to a new kind of technology  ... Project Maca. " ;
                 responsiveVoice.speak(text);
-                  setTimeout(a_tag_visib , 4000 );
+                  setTimeout(a_tag_visib , 3000 );
                 }
 
 
