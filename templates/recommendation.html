@@ -12,14 +12,53 @@
         .main button{
             margin: 7%;
         }
+        .nav-wrapper{
+          color: rgb(0, 0, 138);
+          background-color: rgb(3, 3, 143);
+        }
+        body {
+          background-color: black;
+          color: white;
+        }
+        .head{
+          text-justify: auto;
+          text-align: center;
+          font-size: large;
+          font-weight: bolder;
+          font-family: cursive;
+          font-style: italic;
+          margin-top: 5%;
+        }
       </style>
+       <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
 
     </head>
     <body >
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center">Project Maca</a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="badges.html">About Us</a></li>
+            <li><a href="collapsible.html">More</a></li>
+          </ul>
+        </div>
+      </nav>
 
 <div class="main">
 
-  <h1> Our recommendation</h1>
+  <h1 style="text-justify: auto;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: cursive;
+  font-style: italic;
+  margin-top: 5%;" > Our recommendation</h1>
 
 <br>
 {% for post in popo %}
@@ -37,7 +76,7 @@
 </div>
 
 
-<p>Music Redefined !</p>
+<p class="head" >Music Redefined !</p>
 
 
 
