@@ -42,7 +42,7 @@ class band_names(db.Model):
 
 @app.route('/')
 def home():
-     
+
     return render_template("home.html" )
 
 
@@ -122,4 +122,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
