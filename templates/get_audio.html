@@ -9,6 +9,7 @@
       form{
 
         margin: 10%;
+        text-align: center;
       }
       .head{
           text-justify: auto;
@@ -26,13 +27,22 @@
           background-color: black;
           color: white;
         }
+        .info{
+          text-align: center;
+        }
+        #microbtn{
+          font-size: 30px;
+
+        }
+
+ 
     </style>
        <!-- Compiled and minified CSS -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
        <!-- Compiled and minified JavaScript -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-               
+
   </head>
 
 
@@ -42,16 +52,15 @@
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">Project Maca</a>
         <ul class="left hide-on-med-and-down">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="./index.html">About Us</a></li>
-          <li><a href="./get_audio.html">Get Started</a></li>
-          <li><a href="./recommendation.html">Recommendation</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="">About Us</a></li>
+
         </ul>
       </div>
     </nav>
     <div class="container">
       <form action="" method="post" target="" id="search-form">
-        <input name="q" type="text" style="display:none;" id="inputformtext"placeholder="How are you today? " autocomplete="off" autofocus>
+        <input name="q" type="text" style="display:none; color:white;         font-weight: bold;  " id="inputformtext"placeholder="How are you today? " autocomplete="off" autofocus>
         <!-- <button type="button"><i class="fa fa-microphone"></i></button>  -->
         <br>
         <input style=" display: none;" id="gobutton"type="submit" name="" value="Let's Go">
@@ -82,7 +91,7 @@ const recognition = new SpeechRecognition();
 recognition.continuous = true;
 // recognition.lang = "en-US";
 
-searchForm.insertAdjacentHTML("beforeend", '<button type="button"><i class="fa fa-microphone"></i></button>');
+searchForm.insertAdjacentHTML("beforeend", '<button id="microbtn" type="button"><i class="fa fa-microphone"></i></button>');
 
 
 const micBtn = searchForm.querySelector("button");

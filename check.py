@@ -1,7 +1,7 @@
-import json
+
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-
+import json, random
 def Emotion(emoti_string):
     print("Getting")
     authenticator = IAMAuthenticator('gShpJ1z419dIvo8i4PgG6wbq2IKpo4AoJ0TH-xzQ-hTA')
@@ -24,13 +24,19 @@ def Emotion(emoti_string):
     # json_acceptable_string = tone_dict.replace("'", "\"")
     d = (utterance_analyses)
     print(d)
-    print()
+
     em = d['utterances_tone'][0]['tones'][0]['tone_id']
+    print(em)
 
     if (em == 'excited' or em =='joy'):
-        return "calm Songs"
+        sop = ["Pop Songs" , "Love Songs" , "Rock Love Songs"]
+        return random.choice(sop)
     if (em == 'sad' or em =='frustrated'):
-        return "soothing Songs"
+        sopp = ["Soothing Songs" , "Blues Songs"]
+        return random.choice(sopp)
+
+    if(em is None):
+        return ("Say something! I am giving up on you...")
 
     return "Rock Songs"
 

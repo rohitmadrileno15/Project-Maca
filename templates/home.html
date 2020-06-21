@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<title>Project Maca</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <head>
 
       <style media="screen">
@@ -32,7 +34,7 @@
           text-align: center;
           font-size: large;
           font-weight: bolder;
-          font-family: cursive;
+
           font-style: italic;
         }
         body {
@@ -46,7 +48,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          height: auto; 
+          height: auto;
         }
         .started-2{
           display: flex;
@@ -58,6 +60,19 @@
           color: blue ;
         }
 
+        #reco{
+          text-decoration: none;
+          transition: 0.3s;
+          font: white;
+          align-items: center;
+          margin-left: 40%;
+          cursor: pointer;
+        }
+
+        #reco:hover{
+          border-bottom: 2px solid white;
+        }
+
 
       </style>
        <!-- Compiled and minified CSS -->
@@ -65,7 +80,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+
 
     </head>
     <body >
@@ -74,34 +89,35 @@
 
       <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo center">Project Maca</a>
+          <a href="#" style=" font-family: 'Bebas Neue', cursive;   letter-spacing: 3px;" class="brand-logo center">Project Maca</a>
           <ul class="left hide-on-med-and-down">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="./index.html">About Us</a></li>
-            <li><a href="./get_audio.html">Get Started</a></li>
-            <li><a href="./recommendation.html">Recommendation</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About Us</a></li>
+
           </ul>
         </div>
       </nav>
 
 
 
-    
 
-  
+
+
 
 </div>
 
 
 <p class="head" >Music Defined By your mood!</p>
 <br>
-<div class="started"><button id="btn" type="button" onclick="setTimeout(speakText() , 100)" name="button" > <a class="btn-floating btn-large waves-effect waves-light blue" ><i class="material-icons" >GO</i></a> </div></button> 
+<div class="started"><button id="btn" type="button" onclick="setTimeout(speakText() , 100)" name="button" > <a class="btn-floating btn-large waves-effect waves-light blue" ><i class="material-icons" >GO</i></a> </div></button>
 
 <a id="a-tag" class="first-view" href="/first_view"> Let's hear some songs</a>
+<br>
+<br>
+ 
+<a id="a-tag" style="color:white; text-decoration: underline;" class="first-view" href="/our_recommendation"> Check out the best recommendations</a>
 
-<h6 style="align-items: center; text-align: center; padding: 80px;" >For our best recommendation click the button down below</h6>
 
-<div class="started-2"><a class="btn-floating btn-large waves-effect waves-light blue" href="/our_recommendation"><i class="material-icons">click</i></a></div> 
 
 
 

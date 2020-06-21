@@ -42,7 +42,7 @@ class band_names(db.Model):
 
 @app.route('/')
 def home():
-
+     
     return render_template("home.html" )
 
 
@@ -70,6 +70,7 @@ def index():
         result = request.form
         search_form_value = result['q']
         get_emotion_value = Emotion(search_form_value)
+        print(get_emotion_value)
 
         id = get_emotion_value
         print("Changed")

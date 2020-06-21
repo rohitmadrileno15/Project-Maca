@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap" rel="stylesheet">
+
     <style media="screen">
       #listen{
 
@@ -26,6 +27,13 @@
           color: white;
         }
 
+        #listen {
+        background-color: white;
+            color: black;
+            border-radius: 2px;
+
+        }
+
       #listen:hover{
   background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
   background-position: right center;
@@ -42,7 +50,38 @@
         align-items: center;
       }
 
-      
+      .main-context{
+
+        align-items: center;
+        margin-left: 20%;
+
+      }
+
+      .main-context li{
+        list-style: none;
+      }
+
+      #artist{
+        font-size: 20px;
+
+      }
+
+      #title{
+        font-size: 24px;
+        font-family: 'Mukta', sans-serif;
+
+      }
+
+      hr {
+   border: 1px solid #CC99CC;
+   width: 20%;
+   margin: 0;
+
+ }
+
+
+
+
     </style>
 
      <!-- Compiled and minified CSS -->
@@ -50,7 +89,7 @@
 
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-             
+
 
   </head>
   <body>
@@ -59,53 +98,35 @@
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">Project Maca</a>
         <ul class="left hide-on-med-and-down">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="./index.html">About Us</a></li>
-          <li><a href="./get_audio.html">Get Started</a></li>
-          <li><a href="./recommendation.html">Recommendation</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href=" ">About Us</a></li>
+
         </ul>
       </div>
     </nav>
 
-<header class="text-gray-500 bg-gray-900 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
-    <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0">
-
-    </a>
-    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0 custom">
-      <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-        Know more
-
-      </button>
-    </div>
-  </div>
-</header>
 
 <!-- {{track}} -->
         {% for post in post%}
-<div class="">
-<li>      {{post.title_value}}</li>
- {{post.artist_name_value}}
+<div class="main-context">
+<li id="title">      {{post.title_value}}</li>
+<h5 id="artist">{{post.artist_name_value}}</h4>
  <a href="https://youtube.com{{post.artist_link_value}}"><span id="listen"> &nbsp; Listen to it on Youtube&nbsp;</span></a>
-<br>
+ <br>
+ <br>
+
+ <hr>
 </div>
-<br>
+
+
+
 
         {% endfor %}
 
 
 
 
-<footer class="text-gray-500 bg-gray-900 body-font">
-  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-
-      <span class="ml-3 text-xl"> © Project maca - beta</span>
-    </a>
-
-  </div>
-</footer>
 
 
   </body>
