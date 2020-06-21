@@ -51,9 +51,9 @@ def recommendation():
 
     popo = (band_names.query.all() )
     popo = str(random.choice(popo))
-    print(type(popo))
+    # print(type(popo))
     popo = (popo.split('('))
-    print(popo)
+    # print(popo)
     popo = (popo[1].split(')'))[0]
     id = popo
 
