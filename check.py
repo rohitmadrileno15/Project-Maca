@@ -23,10 +23,10 @@ def Emotion(emoti_string):
     # tone_dict =(json.dumps(utterance_analyses, indent=2))
     # json_acceptable_string = tone_dict.replace("'", "\"")
     d = (utterance_analyses)
-    print(d)
+    # print(d)
 
     em = d['utterances_tone'][0]['tones'][0]['tone_id']
-    print(em)
+    # print(em)
 
     if (em == 'excited' or em =='joy'):
         sop = ["Pop Songs" , "Love Songs" , "Rock Love Songs"]

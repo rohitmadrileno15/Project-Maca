@@ -70,14 +70,14 @@ def index():
         result = request.form
         search_form_value = result['q']
         get_emotion_value = Emotion(search_form_value)
-        print(get_emotion_value)
+        # print(get_emotion_value)
 
         id = get_emotion_value
-        print("Changed")
+        # print("Changed")
         era_year =  random.choice(era_array)
-        print(era_year)
+        # print(era_year)
         id = era_year + " " + id
-        print(id)
+        # print(id)
         querystring = {"q":id}
         response = requests.request("GET", url, headers=headers, params=querystring)
         val = (response.text)
@@ -97,7 +97,7 @@ def index():
             print("Link- ",artist_link_value)
             b= {"title_value":title_value ,"artist_link_value": artist_link_value, "artist_name_value" : artist_name_value}
             a.append(b)
-        print(a)
+        # print(a)
 
         return render_template("index.html", post = a)
 

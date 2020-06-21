@@ -62,7 +62,7 @@ def get_all_links(song_title = "", singer_name = ""):
     src_url = song_title + "+" + singer_name
     results = YoutubeSearch(src_url, max_results=10).to_dict()
 
-    print((results))
+    # print((results))
 
     c = 0
 
@@ -78,7 +78,7 @@ def get_all_links(song_title = "", singer_name = ""):
             link_of_song.append(b)
             c+=1
 
-    print(link_of_song)
+    # print(link_of_song)
     return link_of_song
 
 
