@@ -10,13 +10,45 @@
 
         margin: 10%;
       }
+      .head{
+          text-justify: auto;
+          text-align: center;
+          font-size: large;
+          font-weight: bolder;
+          font-family: cursive;
+          font-style: italic;
+        }
+        .nav-wrapper{
+          color: rgb(0, 0, 138);
+          background-color: rgb(0, 0, 138);
+        }
+        body {
+          background-color: black;
+          color: white;
+        }
     </style>
+       <!-- Compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+       <!-- Compiled and minified JavaScript -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+               
   </head>
 
 
 
   <body>
-
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">Project Maca</a>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="./index.html">About Us</a></li>
+          <li><a href="./get_audio.html">Get Started</a></li>
+          <li><a href="./recommendation.html">Recommendation</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <form action="" method="post" target="" id="search-form">
         <input name="q" type="text" style="display:none;" id="inputformtext"placeholder="How are you today? " autocomplete="off" autofocus>

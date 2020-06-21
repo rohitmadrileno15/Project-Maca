@@ -16,6 +16,15 @@
       transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
       }
+      .nav-wrapper{
+          color: rgb(0, 0, 138);
+          background-color: rgb(0, 0, 138);
+        }
+
+        body {
+          background-color: black;
+          color: white;
+        }
 
       #listen:hover{
   background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
@@ -27,19 +36,44 @@
       #whole-body{
         border: 4px solid #969696;
       }
+
+      .custom{
+        display: flex;
+        align-items: center;
+      }
+
+      
     </style>
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             
 
   </head>
   <body>
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">Project Maca</a>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="./index.html">About Us</a></li>
+          <li><a href="./get_audio.html">Get Started</a></li>
+          <li><a href="./recommendation.html">Recommendation</a></li>
+        </ul>
+      </div>
+    </nav>
 
 <header class="text-gray-500 bg-gray-900 body-font">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
     <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0">
 
-      <span class="ml-3 text-xl xl:block lg:hidden">Project maca</span>
     </a>
-    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0 custom">
       <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
         Know more
 
