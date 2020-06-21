@@ -23,20 +23,26 @@ def Emotion(emoti_string):
     # tone_dict =(json.dumps(utterance_analyses, indent=2))
     # json_acceptable_string = tone_dict.replace("'", "\"")
     d = (utterance_analyses)
+    print(d )
+
     # print(d)
 
     em = d['utterances_tone'][0]['tones'][0]['tone_id']
-    # print(em)
+    print(em)
 
     if (em == 'excited' or em =='joy'):
         sop = ["Pop Songs" , "Love Songs" , "Rock Love Songs"]
         return random.choice(sop)
-    if (em == 'sad' or em =='frustrated'):
+
+    if (em == 'sad' ):
+        sopp = ["Soothing Songs" , "Blues Songs"]
+        return random.choice(sopp)
+    if (em =='frustrated'):
         sopp = ["Soothing Songs" , "Blues Songs"]
         return random.choice(sopp)
 
     if(em is None):
-        return ("Say something! I am giving up on you...")
+        return 'Breakup Songs'
 
     return "Rock Songs"
 
