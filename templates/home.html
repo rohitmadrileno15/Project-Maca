@@ -12,34 +12,102 @@
         .main button{
             margin: 7%;
         }
+
+        .nav-wrapper{
+          color: rgb(0, 0, 138);
+          background-color: rgb(0, 0, 138);
+        }
+
+        .started{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          border: 3px ;
+          margin-top: 15%;
+          color: blue ;
+        }
+        .head{
+          text-justify: auto;
+          text-align: center;
+          font-size: large;
+          font-weight: bolder;
+          font-family: cursive;
+          font-style: italic;
+        }
+        body {
+          background-color: black;
+          color: white;
+        }
+        .first-view{
+          text-emphasis-color: white;
+          font-size: larger;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: auto; 
+        }
+        .started-2{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          border: 3px ;
+          margin-top: 2%;
+          color: blue ;
+        }
+
+
       </style>
+       <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
 
     </head>
     <body >
       <script src="https://code.responsivevoice.org/responsivevoice.js?key=v6dQ0XeY"></script>
-<div class="main">
-
-  <h1>Project Maca</h1>
 
 
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center">Project Maca</a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="badges.html">About Us</a></li>
+            <li><a href="collapsible.html">More</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <button id="btn" type="button" style="display: block;" onclick="setTimeout(speakText() , 100)" name="button">Started</button>
 
-  <a id="a-tag"style="display:none;"href="/first_view"> Let's hear some songs</a>
+
+    
+
+  
 
 </div>
 
 
-<p>Music Defined By your mood!</p>
+<p class="head" >Music Defined By your mood!</p>
 <br>
-<a href="/our_recommendation">Click to check our best recommendation</a>
+<div class="started"> <a class="btn-floating btn-large waves-effect waves-light blue" id="btn" type="button" onclick="setTimeout(speakText() , 100)" name="button" ><i class="material-icons" >GO</i></a>  </div>
+
+<a id="a-tag" class="first-view" href="/first_view"> Let's hear some songs</a>
+
+<h6 style="align-items: center; text-align: center; padding: 80px;" >For our best recommendation click the button down below</h6>
+
+<div class="started-2"><a class="btn-floating btn-large waves-effect waves-light blue" href="/our_recommendation"><i class="material-icons">click</i></a></div> 
+
 
 
 
         <script>
           function a_tag_visib() {
               document.getElementById("a-tag").style.display = "block";
-
               document.getElementById("btn").style.display = "none";
           }
             function speakText(){
@@ -50,6 +118,12 @@
                 }
 
 
+        </script>
+        <script>
+          function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+          }
         </script>
     </body>
 </html>
