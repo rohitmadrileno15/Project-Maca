@@ -31,11 +31,11 @@ def Emotion(emoti_string):
     print(em)
 
     if (em == 'excited' or em =='joy'):
-        sop = ["Pop Songs" , "Love Songs" ,"Jazz Songs" , "Rock Love Songs"]
+        sop = ["Pop Songs" ,"Jazz Songs" , "Rock Love Songs"]
         return random.choice(sop)
 
     if (em == 'sad' ):
-        sopp = ["Soothing Songs" , "Blues Songs"]
+        sopp = ["Soothing Songs" ,"breakup songs" "Blues Songs"]
         return random.choice(sopp)
     if (em =='frustrated'):
         sopp = ["Soothing Songs" , "Blues Songs"  , "Heavy Metal songs"]
